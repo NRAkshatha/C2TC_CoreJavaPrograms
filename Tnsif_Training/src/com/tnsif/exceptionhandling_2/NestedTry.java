@@ -1,0 +1,27 @@
+package com.tnsif.exceptionhandling_2;
+
+class NestedTry {
+
+    
+    public static void main(String args[]) {
+       
+        try {
+            
+            int a[] = { 1, 2, 3, 4, 5 };
+
+            
+            System.out.println(a[6]); 
+
+          
+            try {
+               
+                int x = a[3] / 0; 
+            } catch (ArithmeticException e2) {
+                System.out.println("Division by zero is not possible");
+            }
+        } catch (ArrayIndexOutOfBoundsException e1) {
+            System.out.println("ArrayIndexOutOfBoundsException");
+            System.out.println("Element at such index does not exist");
+        }
+    }
+}
